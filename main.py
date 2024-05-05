@@ -19,13 +19,14 @@ def search():
         'author': Author.fio,
         'title': Publication.title,
         'language': Language.name,
-        'year': Publication.publishing_year
+        'publishing_year': Publication.publishing_year
     }
 
     for key, value in filters.items():
         param = request.args.get(key)
-        if param:
-            query = query.filter(value.ilike(f'%{param}%'))
+        if param == 'null':
+            param = ''
+        query = query.filter(value.ilike(f'%{param}%'))
 
     return jsonify([{
         'title': publication.title,

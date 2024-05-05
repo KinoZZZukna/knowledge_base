@@ -1,0 +1,21 @@
+.container {
+    padding: 15px;
+    width: 400px;
+}
+
+.header {
+    font-size: 36px;
+    font-weight: 450;
+    line-height: 1;
+}
+
+.search-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 1vh;
+}
+
+.submit-button {
+    width: 100px;
+}

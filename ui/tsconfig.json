@@ -2,8 +2,13 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
+        "baseUrl": "./",
         "outDir": "./dist/out-tsc",
-        "strict": true,
+        "paths": {
+            "@shared/*": [
+                "src/app/+shared/*"
+            ]
+        },
         "noImplicitOverride": true,
         "noPropertyAccessFromIndexSignature": true,
         "noImplicitReturns": true,
