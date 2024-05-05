@@ -1,31 +1,34 @@
-<form class="search-fields" [formGroup]="searchForm" (ngSubmit)="onSearch()">
-    <mat-form-field appearance="outline">
-        <mat-label>Автор</mat-label>
-        <input matInput formControlName="author" />
-        <mat-error *ngIf="searchForm.get('author').invalid && searchForm.get('author').touched">Минимальная длина 3 символа</mat-error>
-    </mat-form-field>
+<div class="container">
+    <div class="header">Поиск</div>
+    <form class="search-fields" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+        <mat-form-field appearance="outline">
+            <mat-label>Автор издания</mat-label>
+            <input matInput formControlName="author" />
+            <mat-error *ngIf="searchForm.get('author').invalid && searchForm.get('author').touched">Минимальная длина 3 символа</mat-error>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline">
-        <mat-label>Название</mat-label>
-        <input matInput formControlName="title" />
-        <mat-error *ngIf="searchForm.get('title').invalid && searchForm.get('title').touched">Минимальная длина 3 символа</mat-error>
-    </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Название издания</mat-label>
+            <input matInput formControlName="title" />
+            <mat-error *ngIf="searchForm.get('title').invalid && searchForm.get('title').touched">Минимальная длина 3 символа</mat-error>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline">
-        <mat-label>Язык</mat-label>
-        <input matInput formControlName="language" />
-        <mat-error *ngIf="searchForm.get('language').invalid && searchForm.get('language').touched">
-            Минимальная длина 3 символа
-        </mat-error>
-    </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Язык издания</mat-label>
+            <input matInput formControlName="language" />
+            <mat-error *ngIf="searchForm.get('language').invalid && searchForm.get('language').touched">
+                Минимальная длина 3 символа
+            </mat-error>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline">
-        <mat-label>Год публикации</mat-label>
-        <input matInput formControlName="publishing_year" />
-        <mat-error *ngIf="searchForm.get('publishing_year').invalid && searchForm.get('publishing_year').touched">
-            Минимальная длина 3 символа
-        </mat-error>
-    </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Год издания</mat-label>
+            <input matInput formControlName="publishing_year" />
+            <mat-error *ngIf="searchForm.get('publishing_year').invalid && searchForm.get('publishing_year').touched">
+                Минимальная длина 3 символа
+            </mat-error>
+        </mat-form-field>
 
-    <button mat-raised-button color="primary" type="submit">Submit</button>
-</form>
+        <button class="submit-button" mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+</div>
