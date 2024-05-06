@@ -1,5 +1,10 @@
-.container {
+:host {
+    display: flex;
+    gap: 15px;
     padding: 15px;
+}
+
+.search-fields-container {
     width: 400px;
 }
 

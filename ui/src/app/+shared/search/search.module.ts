@@ -7,9 +7,10 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { SearchFieldsComponent } from './components/search-fields/search-fields.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
 
 @NgModule({
-    declarations: [SearchFieldsComponent],
+    declarations: [SearchFieldsComponent, SearchResultsComponent],
     imports: [CommonModule, HttpClientModule, MatButtonModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
     exports: [SearchFieldsComponent]
 })

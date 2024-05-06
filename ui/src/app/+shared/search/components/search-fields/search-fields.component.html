@@ -1,4 +1,4 @@
-<div class="container">
+<div class="search-fields-container">
     <div class="header">Поиск</div>
     <form class="search-fields" [formGroup]="searchForm" (ngSubmit)="onSearch()">
         <mat-form-field appearance="outline">
@@ -32,3 +32,5 @@
         <button class="submit-button" mat-raised-button color="primary" type="submit">Submit</button>
     </form>
 </div>
+
+<app-search-results [publications]="publications"></app-search-results>
