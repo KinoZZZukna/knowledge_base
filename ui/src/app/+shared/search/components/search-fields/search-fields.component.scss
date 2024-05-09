@@ -5,20 +5,20 @@
 }
 
 .search-fields-container {
-    width: 400px;
+    width: 20%;
 }
 
 .header {
     font-size: 36px;
     font-weight: 450;
     line-height: 1;
+    margin-bottom: 1vh;
 }
 
 .search-fields {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    margin-top: 1vh;
 }
 
 .submit-button {

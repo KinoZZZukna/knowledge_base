@@ -1,12 +1,15 @@
 <div class="search-results">
-    <div class="search-result" *ngFor="let publication of publications">
-        <img src="{{ publication.photo_of_cover }}" alt="image" class="cover" />
-        <div class="search-result-fields">
-            <div class="search-result-field">{{ publication.title }}</div>
-            <div class="search-result-field">{{
-                publication.title_of_original + ', ' + publication.author + ', ' + publication.publishing_year + ', ' + publication.language
-            }}</div>
-            <div class="search-result-field">{{ publication.main_theses }}</div>
-        </div>
-    </div>
+    <div class="header">Результаты поиска</div>
+    <mat-card class="search-result-container" appearance="outlined" *ngFor="let publication of publications">
+        <mat-card-content class="search-result">
+            <img mat-card-image src="{{ publication.photo_of_cover }}" alt="image" class="cover" />
+            <div class="search-result-fields">
+                <mat-card-title class="search-result-field">{{ publication.title }}</mat-card-title>
+                <mat-card-subtitle class="search-result-field">{{
+                    publication.title_of_original + ', ' + publication.author + ', ' + publication.publishing_year + ', ' + publication.language
+                }}</mat-card-subtitle>
+                <mat-card-subtitle class="search-result-field">{{ publication.main_theses }}</mat-card-subtitle>
+            </div>
+        </mat-card-content>
+    </mat-card>
 </div>

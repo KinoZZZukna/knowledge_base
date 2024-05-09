@@ -33,4 +33,4 @@
     </form>
 </div>
 
-<app-search-results [publications]="publications"></app-search-results>
+<app-search-results *ngIf="publications" [publications]="publications"></app-search-results>
