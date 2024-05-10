@@ -21,6 +21,11 @@
     gap: 4px;
 }
 
-.submit-button {
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.form-button {
     width: 100px;
 }

@@ -29,7 +29,10 @@
             </mat-error>
         </mat-form-field>
 
-        <button class="submit-button" mat-raised-button color="primary" type="submit">Submit</button>
+        <div class="form-buttons">
+            <button class="form-button" mat-raised-button color="primary" type="submit">Submit</button>
+            <button class="form-button" mat-raised-button color="warn" type="button" (click)="onClear()">Clear</button>
+        </div>
     </form>
 </div>
 

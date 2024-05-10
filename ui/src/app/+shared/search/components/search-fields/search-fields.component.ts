@@ -31,7 +31,10 @@ export class SearchFieldsComponent implements OnInit {
             this.apiService.searchPublications(this.searchForm.value).subscribe(result => {
                 this.publications = result;
             });
-            this.searchForm.reset();
         }
+    }
+
+    onClear() {
+        this.searchForm.reset();
     }
 }
