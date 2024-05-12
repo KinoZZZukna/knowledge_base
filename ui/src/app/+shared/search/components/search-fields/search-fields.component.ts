@@ -36,5 +36,6 @@ export class SearchFieldsComponent implements OnInit {
 
     onClear() {
         this.searchForm.reset();
+        this.publications = null;
     }
 }
