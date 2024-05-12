@@ -1,15 +1,17 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
+import { Publication } from '@shared/search/interfaces/publication';
 import { SearchApiService } from '@shared/search/services/search-api.service';
 
 @Component({
-    changeDetection: ChangeDetectionStrategy.OnPush,
     selector: 'app-search-fields',
     templateUrl: './search-fields.component.html',
     styleUrl: './search-fields.component.scss'
 })
 export class SearchFieldsComponent implements OnInit {
+    publications: Publication[];
+
     searchForm: FormGroup;
 
     constructor(private apiService: SearchApiService) {}
@@ -26,8 +28,14 @@ export class SearchFieldsComponent implements OnInit {
 
     onSearch() {
         if (this.searchForm.valid && this.searchForm.dirty) {
-            this.apiService.searchPublications(this.searchForm.value).subscribe(console.log);
-            this.searchForm.reset();
+            this.apiService.searchPublications(this.searchForm.value).subscribe(result => {
+                this.publications = result;
+            });
         }
+    }
+
+    onClear() {
+        this.searchForm.reset();
+        this.publications = null;
     }
 }

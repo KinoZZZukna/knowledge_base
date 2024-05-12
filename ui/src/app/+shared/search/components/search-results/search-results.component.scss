@@ -1,0 +1,24 @@
+:host {
+    width: 80%;
+}
+
+.header {
+    font-size: 36px;
+    font-weight: 450;
+    line-height: 1;
+    margin-bottom: 1vh;
+}
+
+.search-result {
+    display: flex;
+    gap: 16px;
+}
+
+.search-result-container {
+    margin-bottom: 10px;
+}
+
+.cover {
+    width: 160px;
+    height: 200px;
+}

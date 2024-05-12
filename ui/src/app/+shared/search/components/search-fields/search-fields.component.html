@@ -1,4 +1,4 @@
-<div class="container">
+<div class="search-fields-container">
     <div class="header">Поиск</div>
     <form class="search-fields" [formGroup]="searchForm" (ngSubmit)="onSearch()">
         <mat-form-field appearance="outline">
@@ -29,6 +29,11 @@
             </mat-error>
         </mat-form-field>
 
-        <button class="submit-button" mat-raised-button color="primary" type="submit">Submit</button>
+        <div class="form-buttons">
+            <button class="form-button" mat-raised-button color="primary" type="submit">Submit</button>
+            <button class="form-button" mat-raised-button color="warn" type="button" (click)="onClear()">Clear</button>
+        </div>
     </form>
 </div>
+
+<app-search-results *ngIf="publications" [publications]="publications"></app-search-results>

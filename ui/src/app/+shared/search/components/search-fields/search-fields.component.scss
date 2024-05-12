@@ -1,21 +1,32 @@
-.container {
+:host {
+    display: flex;
+    gap: 15px;
     padding: 15px;
-    width: 400px;
+    justify-content: center;
+}
+
+.search-fields-container {
+    width: 20%;
 }
 
 .header {
     font-size: 36px;
     font-weight: 450;
     line-height: 1;
+    margin-bottom: 1vh;
 }
 
 .search-fields {
     display: flex;
     flex-direction: column;
     gap: 4px;
-    margin-top: 1vh;
 }
 
-.submit-button {
+.form-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.form-button {
     width: 100px;
 }
