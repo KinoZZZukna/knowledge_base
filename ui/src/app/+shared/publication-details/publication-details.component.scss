@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 450;
+    line-height: 1;
+    margin-bottom: 2vh;
+}
+
+.details {
+    display: flex;
+    gap: 30px;
+}
+
+.cover {
+    width: 480px;
+    height: 600px;
+}
+
+.details-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 30px;
+}

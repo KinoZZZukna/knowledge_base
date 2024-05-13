@@ -1,6 +1,11 @@
 <div class="search-results">
-    <div class="header">Результаты поиска</div>
-    <mat-card class="search-result-container" appearance="outlined" *ngFor="let publication of publications">
+    <div class="title">Результаты поиска</div>
+    <mat-card
+        [routerLink]="'/publication/' + publication.id"
+        class="search-result-container"
+        appearance="outlined"
+        *ngFor="let publication of publications"
+    >
         <mat-card-content class="search-result">
             <img mat-card-image src="{{ publication.photo_of_cover }}" alt="image" class="cover" />
             <div class="search-result-fields">

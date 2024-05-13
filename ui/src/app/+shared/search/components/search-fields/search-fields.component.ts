@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
+import { ApiService } from '@shared/services/api.service';
 import { Publication } from '@shared/search/interfaces/publication';
-import { SearchApiService } from '@shared/search/services/search-api.service';
 
 @Component({
     selector: 'app-search-fields',
@@ -14,10 +14,11 @@ export class SearchFieldsComponent implements OnInit {
 
     searchForm: FormGroup;
 
-    constructor(private apiService: SearchApiService) {}
+    constructor(private apiService: ApiService) {}
 
     ngOnInit() {
         this.searchForm = new FormGroup({
+            smart_search: new FormControl(''),
             author: new FormControl('', Validators.minLength(3)),
             title: new FormControl('', Validators.minLength(3)),
             language: new FormControl('', Validators.minLength(3)),
@@ -36,6 +37,5 @@ export class SearchFieldsComponent implements OnInit {
 
     onClear() {
         this.searchForm.reset();
-        this.publications = null;
     }
 }
