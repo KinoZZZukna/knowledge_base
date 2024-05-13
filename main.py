@@ -29,6 +29,10 @@ def search():
             param = ''
         query = query.filter(value.ilike(f'%{param}%'))
 
+    smart_search = request.args.get('smart_search')
+    if smart_search:
+        print('Data for smart search:', smart_search)
+
     return jsonify([{
         'id': publication.id,
         'title': publication.title,

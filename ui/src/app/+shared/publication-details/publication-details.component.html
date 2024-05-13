@@ -1,0 +1,26 @@
+<ng-container *ngIf="publicationDetails">
+    <div class="title">{{ publicationDetails.title }}</div>
+    <div class="details">
+        <img src="{{ publicationDetails.photo_of_cover }}" alt="image" class="cover" />
+        <div class="details-fields">
+            <div>Название оригинала: {{ publicationDetails.title_of_original }}</div>
+            <div>Автор: {{ publicationDetails.author }}</div>
+            <div>Ключевые слова: {{ publicationDetails.main_theses }}</div>
+            <div
+                >Издательство:
+                {{
+                    publicationDetails.publisher_name +
+                        ', ' +
+                        publicationDetails.country_name +
+                        ', ' +
+                        publicationDetails.city_name +
+                        ', ' +
+                        publicationDetails.publishing_year
+                }}</div
+            >
+            <div>Тип издания: {{ publicationDetails.publication_type_name }}</div>
+            <div>Язык издания: {{ publicationDetails.language }}</div>
+            <a href="{{ publicationDetails.publication_text }}" target="_blank">Читать</a>
+        </div>
+    </div>
+</ng-container>
